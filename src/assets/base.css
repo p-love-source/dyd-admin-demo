@@ -1,0 +1,417 @@
+/*css reset */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+html,
+body {
+    -webkit-user-select: auto;
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body,
+div,
+object,
+iframe,
+applet,
+object,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+address,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+progress {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline
+}
+
+a {
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    background-color: transparent
+}
+
+li {
+    list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden],
+template {
+    display: none
+}
+
+a:active,
+a:hover {
+    outline: 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b,
+strong {
+    font-weight: bold
+}
+
+dfn {
+    font-style: italic
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+small {
+    font-size: 80%
+}
+
+img {
+    border: 0;
+    -webkit-touch-callout: none;
+    width: auto;
+    width: 100%;
+    border: none!important;
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+
+pre {
+    overflow: auto
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    /* font: inherit; */
+    margin: 0;
+    -webkit-appearance: none;
+    outline: none;
+    line-height: normal
+}
+
+button {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input {
+    line-height: normal
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto
+}
+
+optgroup {
+    font-weight: bold
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td,
+th {
+    padding: 0
+}
+
+
+/*media query root size*/
+/*移动端媒体查询*/
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    html {
+        font-size: 42.6667px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 360px) {
+    html {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 375px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
+    html {
+        font-size: 55.2px;
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 600px) {
+    html {
+        font-size: 66.6667px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    html {
+        font-size: 100px;
+    }
+}
+
+/*pc媒体查询1024  1280  1366  1440  1680  1920  */
+@media screen and (min-width: 1024px) and (max-width:1280){
+    html{font-size: 20px}
+} 
+@media screen and (min-width: 1281px) and (max-width:1366){
+    html{font-size: 22px}
+} 
+@media screen and (min-width: 1367px) and (max-width:1440){
+    html{font-size: 24px}
+} 
+@media screen and (min-width: 1441px) and (max-width:1680){
+    html{font-size: 26px}
+} 
+@media screen and (min-width: 1681px) and (max-width:1920){
+    html{font-size: 28px}
+} 
+@media screen and (min-width: 1921px) and (max-width: 9999) {
+    html{font-size: 33px}
+} 
+/*万能清除浮动*/
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/*common css */
+.span1 {
+    flex: 1;
+}
+
+.span3 {
+    flex: 3;
+}
+.size20 {
+    font-size: 0.24rem;
+}
+.size22 {
+    font-size: 0.22rem;
+}
+.size24 {
+    font-size: 0.24rem;
+}
+.size28 {
+    font-size: 0.28rem;
+}
+.size32 {
+    font-size: 0.32rem;
+}
+.size34 {
+    font-size: 0.34rem;
+}
+.size36 {
+    font-size: 0.36rem;
+}
+.white {
+    color: #fff;
+}
+.red {
+    color: rgba(255, 60, 60, 1);
+}
+.black33 {
+    color: #333333;
+}
+.black66 {
+    color: #666666;
+}
+.black99 {
+    color: #999999;
+}
+.flex{
+    display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+}
+.flex-col{
+    display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
