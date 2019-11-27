@@ -21,7 +21,23 @@ const tellTypeFunc = arg => typeof arg === "function" ? arg() : arg;
  * */ 
 const arrFilter = (arr, num) => arr.filter(val => val != num);
 
+/**
+ * @param 获取对象数组中，指定的某个属性值所对应的某个对象
+ * @param {Array} list 目标数组
+ * @param {} obj 目标对象
+ * */ 
+const getSoleData = (list, obj) => list.filter(val => {
+    for (let item in obj) {
+        if (val[item] == obj[item]) return val;
+    }
+})
+
+/**
+ * 
+ * */ 
+
+
 
 // compose 组合
 
-export {sum, addAttrFunc, tellTypeFunc, arrFilter};
+export {sum, addAttrFunc, tellTypeFunc, arrFilter, getSoleData};

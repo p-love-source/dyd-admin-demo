@@ -1,6 +1,9 @@
 // 同步 ==>用来给state数据模型赋值 (只修改数据) (方法为纯函数,异步请求完成后改变state中的数据模型在此处进行)
 
 export default {
+    loginData (state, data) {
+        console.log("mutations-data:",data);
+    },
     PAGE_NAV_LIST(state, data) {
         state.nav_list = data;
     },

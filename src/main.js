@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import api from "./api/index";
+// import { post } from "./net/http";
 
 import "./assets/base.css";
 import "./assets/global.less";
@@ -16,13 +16,8 @@ Vue.use(ElementUI, {
 });
 Vue.config.productionTip = false;
 
-Vue.prototype.$api = api;
+// Vue.prototype.$api = post;
 
-// 手机号安全处理
-Vue.filter("formatPhone", function (data) {
-  let str = data + "";
-  return `${str.substr(0,3)}*******${str.substr(str.length-1,str.length)}`
-})
 // 保留小数
 Vue.filter("two-decimals", function (data, num = 2) {
 

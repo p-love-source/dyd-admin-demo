@@ -31,3 +31,13 @@ system、operations、user、commodity、order、activity、reward、news、stat
 
 
 http://neilzhou.test.51k1k.com/AcpActivityPage/page_list/mod_id/1
+
+
+
+关于路由非登录重定向
+
+这里提供两种方案：
+
+1. 保存登录状态，在目标路由页面进行登录状态判断，若未登录，重定向
+
+2. 在路由管理处，通过路由导航守卫做登录检测，若未登录，重定向（推荐这种方式，实现请参考https://github.com/vuejs/vue-router/blob/dev/examples/auth-flow/app.js）

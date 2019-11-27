@@ -1,11 +1,10 @@
 <template>
     <div class="login">
-        {{title}}
+        <button @click ="getData">{{title}}</button>
     </div>
 </template>
 
 <script>
-
   export default {
     name:'login',
     data () {
@@ -18,9 +17,15 @@
     },
     components: {},
 
-    mounted() {},
+    mounted() {
+      
+    },
 
-    methods: {},
+    methods: {
+      getData () {
+        this.$store.dispatch("loginData", "登录页发送了一个action--loginData")
+      }
+    },
 
   }
 
