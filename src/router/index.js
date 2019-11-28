@@ -16,26 +16,20 @@ const constantRouterMap = [
     path: "/login",
     name: "login",
     component: () => import(/* webpackChunkName: "login" */ "../views/Login.vue"),
+    hidden: true,
     meta: {
       title: "登录",
       auth: true // 用来验证登录后才能查看
     }
   },
   {
-    path: "/Index",
-    name: "index",
-    component: ()=> import(/* webpackChunkName: "home" */ "../views/Index.vue"),
+    path: "404",
+    name: "404",
+    component: () => (/* webpackChunkName: "404" */ "../views/404.vue"),
+    hidden: true,
     meta: {
-      title: "首页",
+      title: "404",
       auth: true
-    }
-  },
-  {
-    path: "/operations/OperationsSigninConfig",
-    name: "signin-config",
-    component: ()=> import(/* webpackChunkName: "operationssigninconfig" */ "../views/operations/OperationsSigninConfig"),
-    meta: {
-      title: "签到列表"
     }
   }
 ]
@@ -58,6 +52,7 @@ console.log("total-router:",routes);
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
+  scrollBehavior: () => ({ y: 0 }),
   routes
 });
 

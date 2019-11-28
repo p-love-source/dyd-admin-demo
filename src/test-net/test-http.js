@@ -8,22 +8,6 @@ import {
     Message
 } from "element-ui";
 import store from "../store";
-import QS from "qs"; // 参数序列化
-import Md5 from "./md5";
-
-let url = "http://test.51k1k.com/inline_frame/alliance-activity/#/home?access_token=shopping:login_user_9c1b18170f0e8679dad3fe4a240fa500";
-
-const domain = {
-    public: "http://app.51k1k.com",
-    beta: "http://beta.test.51k1k.com",
-    test: "http://test.51k1k.com"
-}
-
-
-let root = domain.test;
-console.log(root);
-
-let access_token = "shopping:login_user_9c1b18170f0e8679dad3fe4a240fa500";
 
 /**
  * 提示弹框
@@ -79,29 +63,14 @@ const errorHandle = (status, other) => {
 var instance = axios.create();
 // 设置post请求头
 // instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-function http(params) {
-
-    let time = new Date().getTime() / 1000;
-    params.appid = "1";
-    params.token = "eb86fa064482989312e2a1557ddb4032";
-    params.access_token = access_token;
-    params.os = "wx";
-    params.app_version = "1.0";
-    params.channel_id = "0";
-    params.time = time;
-    params.sign = Md5.hex_md5(
-        access_token + time + "ijJeFyo0U2fOBEd0olKBUx8zWcgIo68d"
-    );
-    
-    const options = {
-        url: `${root}/api/api`,
-        method: "post",
-        data: QS.stringify(params)
-    };
-
-
+function http({
+    url,
+    method,
+    data,
+    headers
+}) {
     return new Promise((resolve, reject) => {
-        console.log("options",options);
+        console.log(url, method, data, headers);
         /** 
          * 请求拦截器 
          * 每次请求前，如果存在token则在请求头中携带token 
@@ -130,7 +99,6 @@ function http(params) {
                 }
                 // TODO 对参数做处理
                 console.log("request:", config);
-
                 // console.log(config);
                 return config;
             },
@@ -161,8 +129,13 @@ function http(params) {
             });
 
 
-        axios(options).then(res => {
-            console.log(res);
+        axios({
+            url,
+            method,
+            data,
+            headers
+        }).then(res => {
+            console.log("res",res);
             resolve(res);
         }).catch(err => {
             reject(err);

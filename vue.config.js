@@ -1,5 +1,11 @@
 const path = require("path");
 
+let auth = require("./data/auth.json");
+let slider = require("./data/slider.json");
+let test = require("./data/test.json");
+let user = require("./data/user.json");
+
+
 // module.exports = {
 //     publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
 //     outputDir: 'dist',
@@ -182,7 +188,7 @@ module.exports = {
   },
   // webpack-dev-server 相关配置
   devServer: {
-    hot: true,
+    host: "localhost",
     open: true,
     port: 8080,
     https: false,
@@ -197,7 +203,22 @@ module.exports = {
         }
       }
     }, // 设置代理
-    before: app => {}
+    before: app => {
+      app.get("/auth", (req, res) => {
+        console.log("auth");
+        res.json(auth);
+      })
+      app.get("/slider", (req, res) => {
+        res.json(slider);
+      })
+      app.get("/test", (req, res) => {
+        console.log("test");
+        res.json(test);
+      })
+      app.get("/user", (req, res) => {
+        res.json(user);
+      })
+    }
   },
   lintOnSave: false
 }

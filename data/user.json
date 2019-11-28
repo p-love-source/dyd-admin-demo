@@ -1,0 +1,34 @@
+{
+    "list": [
+        {
+            "username": "系统管理员",
+            "password": "111",
+            "role": "system",
+            "icon": ""
+        },
+        {
+            "username": "订单管理员",
+            "password": "111",
+            "role": "order",
+            "icon": ""
+        },
+        {
+            "username": "商品管理员",
+            "password": "111",
+            "role": "goods",
+            "icon": ""
+        },
+        {
+            "username": "运营管理员",
+            "password": "111",
+            "role": "operate",
+            "icon": ""
+        },
+        {
+            "username": "活动管理员",
+            "password": "111",
+            "role": "activity",
+            "icon": ""
+        }
+    ]
+}

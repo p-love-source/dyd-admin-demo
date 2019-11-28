@@ -1,0 +1,128 @@
+{
+    "nav_list": [
+        {
+          "type": "1",
+          "name": "一级导航1",
+          "icon": "el-icon-location",
+          "itemMenu": [
+            {
+              "type": "1-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            },
+            {
+              "type": "1-2",
+              "name": "二级导航",
+              "classify_name": "分类2"
+            }
+          ]
+        },
+        {
+          "type": "2",
+          "name": "一级导航2",
+          "icon": "el-icon-setting",
+          "itemMenu": [
+            {
+              "type": "2-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            },
+            {
+              "type": "2-2",
+              "name": "二级导航",
+              "classify_name": "分类2"
+            }
+          ]
+        },
+        {
+          "type": "3",
+          "name": "一级导航3",
+          "icon": "el-icon-s-custom",
+          "itemMenu": [
+            {
+              "type": "3-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            }
+          ]
+        },
+        {
+          "type": "4",
+          "name": "一级导航4",
+          "icon": "el-icon-message-solid",
+          "itemMenu": [
+            {
+              "type": "4-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            }
+          ]
+        }
+      ],
+    "manage_list": [
+        {
+          "type": "1",
+          "name": "系统管理",
+          "icon": "el-icon-location",
+          "itemMenu": [
+            {
+              "type": "1-1",
+              "path": "/system1-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            },
+            {
+              "type": "1-2",
+              "path": "/system1-2",
+              "name": "二级导航",
+              "classify_name": "分类2"
+            }
+          ]
+        },
+        {
+          "type": "2",
+          "name": "用户管理",
+          "icon": "el-icon-setting",
+          "itemMenu": [
+            {
+              "type": "2-1",
+              "path": "/system2-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            },
+            {
+              "type": "2-2",
+              "path": "/system2-2",
+              "name": "二级导航",
+              "classify_name": "分类2"
+            }
+          ]
+        },
+        {
+          "type": "3",
+          "name": "活动管理",
+          "icon": "el-icon-s-custom",
+          "itemMenu": [
+            {
+              "type": "3-1",
+              "path": "/system3-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            }
+          ]
+        },
+        {
+          "type": "4",
+          "name": "统计数据",
+          "icon": "el-icon-message-solid",
+          "itemMenu": [
+            {
+              "type": "4-1",
+              "path": "/system4-1",
+              "name": "二级导航",
+              "classify_name": "分类1"
+            }
+          ]
+        }
+      ]
+}
