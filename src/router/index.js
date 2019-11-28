@@ -13,6 +13,15 @@ const constantRouterMap = [
     hidden: true
   },
   {
+    path: "/index",
+    name: "Index",
+    component: () => import(/* webpackChunkName: "index" */ "../views/Index.vue"),
+    hidden: true,
+    meta: {
+      title: "首页",
+    }
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import(/* webpackChunkName: "login" */ "../views/Login.vue"),

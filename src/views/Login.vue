@@ -8,7 +8,7 @@
             label-width="100px"
             class="demo-ruleForm"
         >
-            <el-form-item label="用户名" prop="username"> 
+            <el-form-item label="用户名" prop="username">
                 <el-input v-model.number="ruleForm.username"></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="pass">
@@ -34,6 +34,7 @@ export default {
                 return callback(new Error("用户名不能为空"));
             }
             // TODO 缺少一个用户名验证
+            callback();
             // setTimeout(() => {
             //     if (!Number.isInteger(value)) {
             //         callback(new Error("请输入数字值"));
@@ -79,17 +80,13 @@ export default {
         };
     },
     methods: {
-        getData() {
-            let userinfo = {
-                username: "系统管理员",
-                password: 111
-            };
-            this.$store.dispatch("login", userinfo);
-        },
         submitForm(formName) {
             this.$refs[formName].validate(valid => {
                 if (valid) {
-                    alert("submit!");
+                    // alert("submit!");
+                    console.log(this.ruleForm);
+                    this.$store.dispatch("login", this.ruleForm);
+                    this.$router.push("/index");
                 } else {
                     console.log("error submit!!");
                     return false;
