@@ -40,7 +40,17 @@ const constantRouterMap = [
       title: "404",
       auth: true
     }
-  }
+  },
+  {
+    path: "no-auth",
+    name: "NoAuth",
+    component: () => (/* webpackChunkName: "noauth" */ "../views/NoAuth.vue"),
+    hidden: true,
+    meta: {
+      title: "没有权限",
+      auth: true
+    }
+  },
 ]
 
 // 加载出错404

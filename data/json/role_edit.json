@@ -1,0 +1,51 @@
+{
+    "data": {
+        "system_list": [{
+                "option_name": "系统设置1",
+                "option_id": "system-1"
+            },
+            {
+                "option_name": "系统设置2",
+                "option_id": "system-2"
+            }
+        ],
+        "order_list": [{
+                "option_name": "订单设置1",
+                "option_id": "order-1"
+            },
+            {
+                "option_name": "订单设置2",
+                "option_id": "order-2"
+            }
+        ],
+        "goods_list": [{
+                "option_name": "商品设置1",
+                "option_id": "goods-1"
+            },
+            {
+                "option_name": "商品设置2",
+                "option_id": "goods-2"
+            }
+        ],
+        "operate_list": [{
+                "option_name": "运营设置1",
+                "option_id": "operate-1"
+            },
+            {
+                "option_name": "运营设置2",
+                "option_id": "operate-2"
+            }
+        ],
+        "activity_list": [{
+                "option_name": "活动设置1",
+                "option_id": "activity-1"
+            },
+            {
+                "option_name": "活动设置2",
+                "option_id": "activity-2"
+            }
+        ]
+    },
+    "code": 0,
+    "error_msg": "请求成功"
+}

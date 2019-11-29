@@ -1,0 +1,19 @@
+{
+    "list": [
+        {
+            "admin_name": "系统管理员"
+        },
+        {
+            "admin_name": "订单管理员"
+        },
+        {
+            "admin_name": "商品管理员"
+        },
+        {
+            "admin_name": "运营管理员"
+        },
+        {
+            "admin_name": "活动管理员"
+        }
+    ]
+}

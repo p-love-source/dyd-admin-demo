@@ -135,8 +135,8 @@ function http({
             data,
             headers
         }).then(res => {
-            console.log("res",res);
-            resolve(res);
+            // console.log("res",res);
+            resolve(res.data);
         }).catch(err => {
             reject(err);
         })

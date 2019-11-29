@@ -7,10 +7,10 @@
 export default {
   name: "app",
   created () {
-    console.log("初始化，html模板渲染前");
+    // console.log("初始化，html模板渲染前");
   },
   mounted () {
-    console.log("请求数据，html模板渲染完成后");
+    // console.log("请求数据，html模板渲染完成后");
   }
 }
 </script>>

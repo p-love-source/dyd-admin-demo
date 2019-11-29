@@ -1,6 +1,7 @@
 <template>
   <div class='error404 flex'>
       <p>404</p>
+      <button>GO TO HOME!</button>
   </div>
 </template>
 

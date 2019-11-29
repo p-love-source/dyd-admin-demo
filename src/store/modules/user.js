@@ -1,9 +1,10 @@
-// import { login, logout, getInfo } from '@/api/user'
+import { loginIn, loginOut, getInfo } from "../../api/login";
 import {
     getToken,
     setToken,
     removeToken
 } from '@/utils/auth'
+import { Message } from "element-ui";
 // import router, { resetRouter } from '@/router'
 
 const state = {
@@ -37,14 +38,20 @@ const actions = {
     login({
         commit
     }, userInfo) {
+        console.log(userInfo);
         const {
             username,
-            password
+            pass
         } = userInfo
-        loginIn(username, password).then(res => {
-            console.log("login-data:", res);
-            commit('SET_TOKEN', data.token);
-            setToken(data.token);
+        loginIn(username, pass).then(res => {
+            if (res.code == 0) {
+                console.log("login-data:", res.data);
+                const { data } = res;
+                commit('SET_TOKEN', data.token); // vuex中保存cookie
+                setToken(data.token); // 设置cookie
+            } else {
+                Message(res.error_msg);
+            }
         })
     },
     // get user info

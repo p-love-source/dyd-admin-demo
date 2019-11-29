@@ -18,3 +18,10 @@ auth ==>
 ==> 最多四层嵌套 [[[[]]]]
 
 ```
+
+### 注意
+```
+==> store分模块后dispatch事件名前必须带store/modules中的模块名；
+==>例如：store/modules/user ==> 触发一个login事件 ==> this.$store.dispatch("user/login", data);
+==>
+```

@@ -1,10 +1,8 @@
 const path = require("path");
+const reqFunc = require("./data/index");
 
-let auth = require("./data/auth.json");
-let slider = require("./data/slider.json");
-let test = require("./data/test.json");
-let user = require("./data/user.json");
 
+// const reqFunc = require("./data/reqJsonFunc");
 
 // module.exports = {
 //     publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
@@ -204,20 +202,8 @@ module.exports = {
       }
     }, // 设置代理
     before: app => {
-      app.get("/auth", (req, res) => {
-        console.log("auth");
-        res.json(auth);
-      })
-      app.get("/slider", (req, res) => {
-        res.json(slider);
-      })
-      app.get("/test", (req, res) => {
-        console.log("test");
-        res.json(test);
-      })
-      app.get("/user", (req, res) => {
-        res.json(user);
-      })
+      // 设置所有的本地json请求
+      reqFunc(app);
     }
   },
   lintOnSave: false

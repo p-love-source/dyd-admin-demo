@@ -14,14 +14,15 @@
             <el-form-item label="密码" prop="pass">
                 <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
             </el-form-item>
-            <el-form-item label="确认密码" prop="checkPass">
+            <!-- <el-form-item label="确认密码" prop="checkPass">
                 <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
-            </el-form-item>
+            </el-form-item> -->
             <el-form-item>
                 <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
                 <el-button @click="resetForm('ruleForm')">重置</el-button>
             </el-form-item>
         </el-form>
+        <button @click="loginClick">登录</button>
     </div>
 </template>
 
@@ -69,24 +70,28 @@ export default {
         return {
             ruleForm: {
                 pass: "",
-                checkPass: "",
+                // checkPass: "",
                 username: ""
             },
             rules: {
                 pass: [{ validator: validatePass, trigger: "blur" }],
-                checkPass: [{ validator: validatePass2, trigger: "blur" }],
+                // checkPass: [{ validator: validatePass2, trigger: "blur" }],
                 username: [{ validator: checkAge, trigger: "blur" }]
             }
         };
     },
     methods: {
+        loginClick () {
+            this.$store.dispatch("user/getData", "123");
+        },
         submitForm(formName) {
+            
             this.$refs[formName].validate(valid => {
                 if (valid) {
                     // alert("submit!");
                     console.log(this.ruleForm);
-                    this.$store.dispatch("login", this.ruleForm);
-                    this.$router.push("/index");
+                    this.$store.dispatch("user/login", this.ruleForm);
+                    // this.$router.push("/index");
                 } else {
                     console.log("error submit!!");
                     return false;

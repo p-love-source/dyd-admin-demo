@@ -1,27 +1,5 @@
 /**工具函数*/
 /**
- * @param 格式化时间戳变日期时间
- * */
-export function formatTime(date, fmt) {
-    if (/(y+)/.test(fmt)) {
-        fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
-    }
-    var o = {
-        'M+': date.getMonth() + 1,
-        'd+': date.getDate(),
-        'h+': date.getHours(),
-        'm+': date.getMinutes(),
-        's+': date.getSeconds()
-    }
-    for (var k in o) {
-        if (new RegExp(`(${k})`).test(fmt)) {
-            var str = o[k] + ''
-            fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? str : ('00' + str).substr(str.length));
-        }
-    }
-    return fmt
-}
-/**
  * @param 获取字符的个数
  * */
 export function getTextLen(val) {
@@ -51,32 +29,12 @@ export function getParams(url) {
     }
     return result;
 }
-/**
- * @param 手机号做安全处理(只显示头三位加最后一位)
- * */
-export function formatModile(data) {
-    let str = data + "";
-    return `${str.substr(0, 3)}*******${str.substr(str.length - 1, str.length)}`
-}
-/**
- * @param 取整
- * @param data 目标数值
- * @param type down向下取整、up向上取整
- * */
-export function integer(data, type) {
-    let mid;
-    mid = type == "down" ? Math.floor(data) : Math.ceil(data);
-    return mid;
-}
-
 
 /**
- * 解析link获取url ==>域名 + /api/api
+ * 获取请求url ==>域名 + /api/api
  * */
-
-export function getUrl(data) {
-    let str = data.split("/");
-    return `${str[0]}//${str[2]}/api/api`;
+export function getUrl() {
+    return `${window.location.host}/api/api`;
 }
 /**
  * 解析link,获取参数对象
