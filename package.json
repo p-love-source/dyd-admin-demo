@@ -19,8 +19,7 @@
     "fuse.js": "^3.4.6",
     "js-cookie": "^2.2.1",
     "jszip": "^3.2.2",
-    "less": "^2.7.3",
-    "less-loader": "^5.0.0",
+    "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "path-to-regexp": "^6.1.0",
     "vconsole": "^3.3.4",
@@ -41,10 +40,16 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
+    "less": "^2.7.3",
+    "less-loader": "^5.0.0",
+    "mockjs": "^1.1.0",
+    "node-sass": "^4.13.0",
     "prettier": "^1.18.2",
+    "sass-loader": "^8.0.0",
     "sass-resources-loader": "^2.0.1",
     "style-resources-loader": "^1.2.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "vue-template-compiler": "^2.6.10"
   }
 }

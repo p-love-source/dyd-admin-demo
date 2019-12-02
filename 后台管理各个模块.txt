@@ -1,3 +1,17 @@
+1、data ==> 本地模拟数据
+2、mock ==> 借助mock模块，在线模拟数据
+3、src/api ==> 异步请求方法，例如：login,role
+4、src/components ==> 公共组件
+5、filters ==> 过滤器
+6、icons ==> 图标
+7、layout ==> 界面布局
+8、styles ==> 公共的样式
+9、utils ==> 工具函数
+
+
+
+
+
 // 角色role ==> 
 
 

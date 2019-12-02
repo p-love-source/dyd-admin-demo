@@ -2,8 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 
 Vue.use(Router);
-
-import { getAuthRouter } from "./auth";
+import Layout from "@/layout";
+import { getAuthRouter } from "./modules/auth";
 
 // 不变的路由
 const constantRouterMap = [

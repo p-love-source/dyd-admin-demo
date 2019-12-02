@@ -1,5 +1,5 @@
-import Cookies from "js-cookie";
-
+import Cookies from "js-cookie"; // 处理cookies模块
+ 
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
 import Vue from "vue";
@@ -7,22 +7,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-import "./assets/base.css";
-import "./assets/global.less";
+import "./styles/less/base.less"; 
+import "./styles/less/global.less"; 
 
-// 上线依赖第三方模块
-// "screenfull": "4.2.0",
-// "showdown": "1.9.0",
-// "sortablejs": "1.8.4",
-// "tui-editor": "1.3.3",
-// "vue": "2.6.10",
-// "vue-count-to": "1.0.13",
-// "vue-router": "3.0.2",
-// "vue-splitpane": "1.0.4",
-// "vuedraggable": "2.20.0",
-// "vuex": "3.1.0",
-// "xlsx": "0.14.1"
 
+import "./permission"; // 授权模块
+import "./importElement"; // 全局组件注册模块
 
 // 开发依赖
 // "@babel/core": "7.0.0",
@@ -38,25 +28,13 @@ import "./assets/global.less";
 //     "babel-jest": "23.6.0",
 //     "chalk": "2.4.2",
 //     "chokidar": "2.1.5",
-//     "connect": "3.6.6",
 //     "eslint": "5.15.3",
 //     "eslint-plugin-vue": "5.2.2",
-//     "html-webpack-plugin": "3.2.0",
-//     "husky": "1.3.1",
 //     "lint-staged": "8.1.5",
-//     "mockjs": "1.0.1-beta3",
 //     "node-sass": "^4.9.0",
 //     "plop": "2.3.0",
-//     "runjs": "^4.3.2",
-//     "sass-loader": "^7.1.0",
-//     "script-ext-html-webpack-plugin": "2.1.3",
-//     "script-loader": "0.7.2",
 //     "serve-static": "^1.13.2",
-//     "svg-sprite-loader": "4.1.3",
 //     "svgo": "1.2.0",
-//     "vue-template-compiler": "2.6.10"
-
-
 
 
 

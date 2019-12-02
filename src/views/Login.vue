@@ -16,13 +16,13 @@
             </el-form-item>
             <!-- <el-form-item label="确认密码" prop="checkPass">
                 <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
-            </el-form-item> -->
+            </el-form-item>-->
             <el-form-item>
                 <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
                 <el-button @click="resetForm('ruleForm')">重置</el-button>
             </el-form-item>
         </el-form>
-        <button @click="loginClick">登录</button>
+        <button class="user-name" @click="loginClick">登录</button>
     </div>
 </template>
 
@@ -81,11 +81,10 @@ export default {
         };
     },
     methods: {
-        loginClick () {
+        loginClick() {
             this.$store.dispatch("user/getData", "123");
         },
         submitForm(formName) {
-            
             this.$refs[formName].validate(valid => {
                 if (valid) {
                     // alert("submit!");
@@ -105,5 +104,9 @@ export default {
 };
 </script>
 
-<style lang='' scoped>
+<style lang='less' scoped>
+.user-name {
+    // color: $theme-color;
+    // color: @fontCr;
+}
 </style>
